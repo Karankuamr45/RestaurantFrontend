@@ -36,7 +36,7 @@ const RestaurantList = () => {
     <div>
         <AddRestaurant/>
     </div>
-    <div className="max-w-4xl mx-auto my-8">
+    <div className="max-w-4xl mx-auto my-8 ">
   <h2 className="text-3xl text-center font-bold mb-4">All Restaurants</h2>
   {Array.isArray(restaurants) && restaurants.length > 0 ? (
     <div className="overflow-x-auto">
