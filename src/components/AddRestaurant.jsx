@@ -61,9 +61,14 @@ const AddRestaurant = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-md mx-auto my-8">
+    <form onSubmit={handleSubmit} className="max-w-md mx-auto my-8 shadow-md p-8 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white rounded-md
+    ">
+<h1 className="text-center text-4xl font-extrabold text-white py-2 m-4 ">
+  Add Restaurant
+</h1>
+
       <div className="mb-4">
-        <label htmlFor="name" className="block text-gray-700 text-sm font-bold mb-2">
+        <label htmlFor="name" className="block text-sm font-bold mb-2">
           Restaurant Name
         </label>
         <input
@@ -71,22 +76,23 @@ const AddRestaurant = () => {
           name="name"
           value={formData.name}
           onChange={handleChange}
-          className="border-2 border-gray-400 p-2 w-full"
+          placeholder='name'
+          className=" text-black p-2 w-full rounded-md outline-none"
         />
       </div>
       <div className="mb-4">
-        <label htmlFor="description" className="block text-gray-700 text-sm font-bold mb-2">
+        <label htmlFor="description" className="block  text-sm font-bold mb-2">
           Description
         </label>
         <textarea
           name="description"
           value={formData.description}
           onChange={handleChange}
-          className="border-2 border-gray-400 p-2 w-full"
+          className="text-black p-2 w-full outline-none rounded-md"
         ></textarea>
       </div>
       <div className="mb-4">
-        <label htmlFor="rating" className="block text-gray-700 text-sm font-bold mb-2">
+        <label htmlFor="rating" className="block  text-sm font-bold mb-2">
           Rating
         </label>
         <input
@@ -94,19 +100,20 @@ const AddRestaurant = () => {
           name="rating"
           value={formData.rating}
           onChange={handleChange}
-          className="border-2 border-gray-400 p-2 w-full"
+          className="text-black p-2 w-full outline-none rounded-md"
         />
       </div>
       <div className="mb-4">
-        <label htmlFor="image" className="block text-gray-700 text-sm font-bold mb-2">
+        <label htmlFor="image" className="block  text-sm font-bold mb-2">
           Restaurant Image
         </label>
         <input type="file" name="image" onChange={handleImageChange} className="mb-2" />
         {formData.image && (
-          <img src={URL.createObjectURL(formData.image)} alt="Preview" className="max-w-full h-auto mb-2" />
+          <img src={URL.createObjectURL(formData.image)} alt="Preview" className="w-32 h-32 object-cover mb-2" />
         )}
       </div>
-      <button type="submit" className="bg-blue-500 text-white p-2 rounded">
+      <button type="submit" className="bg-blue-500 text-white
+ p-2 rounded w-full">
         Add Restaurant
       </button>
     </form>
