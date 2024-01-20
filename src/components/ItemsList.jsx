@@ -35,7 +35,7 @@ const ItemList = ({ category, restaurantId }) => {
   const handleDelete = async (itemId) => {
     try {
       // Make API call to delete item
-      await axios.delete(`https://restaurantbackend-7nng.onrender.com/${restaurantId}/${itemId}`);
+      await axios.delete(`https://restaurantbackend-7nng.onrender.com/api/deleteItem/${restaurantId}/${itemId}`);
 
       // Fetch and update items
       fetchItems();
