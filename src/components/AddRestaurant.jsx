@@ -43,7 +43,14 @@ const AddRestaurant = () => {
       ...formData,
       image: e.target.files[0],
     });
+  
+    // Clear error message when user selects an image
+    setErrors({
+      ...errors,
+      image: '',
+    });
   };
+  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
