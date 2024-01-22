@@ -85,7 +85,7 @@ const ItemList = ({ category, restaurantId }) => {
                 </td>
                 <td>
                 <button onClick={() => handleDelete(item._id)} className="bg-red-500 text-white p-2 rounded">
-                Delete Item
+                Delete
               </button>
                 </td>
               </tr>
